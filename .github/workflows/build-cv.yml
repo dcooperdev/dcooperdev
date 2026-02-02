@@ -3,7 +3,7 @@ name: Build and Release CV
 on:
   push:
     tags:
-      - 'v*' # Se dispara solo con tags como v1.0, v2026.1, etc.
+      - 'v*' # Triggers only with tags like v1.0, v2026.1, etc.
 
 permissions:
   contents: write
