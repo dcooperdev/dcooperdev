@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Cooper - CV Clean Tech</title>
+    <title>David Cooper - CV Responsive</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
@@ -26,12 +26,11 @@
         .page {
             width: 210mm;
             height: 297mm;
-            /* Force exact A4 height */
+            /* Fixed A4 height */
             background: white;
             display: flex;
             position: relative;
             overflow: hidden;
-            /* This avoids creating a 2nd page due to a rogue pixel */
         }
 
         /* --- SIDEBAR (LEFT COLUMN) --- */
@@ -39,18 +38,31 @@
             width: 30%;
             background-color: #f4f6f8;
             padding: 40px 25px;
-            /* Reduced from 50px */
+            border-right: 1px solid #e0e0e0;
+
+            /* VERTICAL JUSTIFICATION MAGIC */
             display: flex;
             flex-direction: column;
-            color: #333;
-            border-right: 1px solid #e0e0e0;
+            justify-content: space-between;
+            height: 100%;
         }
 
-        /* NAMES AND TITLES */
+        /* --- MAIN (RIGHT COLUMN) --- */
+        .main {
+            width: 70%;
+            padding: 40px 40px;
+
+            /* VERTICAL JUSTIFICATION MAGIC */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        /* General Text Styles */
         h1 {
             font-family: 'Roboto Mono', monospace;
             font-size: 32px;
-            /* Slightly reduced */
             line-height: 1;
             text-transform: uppercase;
             margin: 0 0 10px 0;
@@ -63,25 +75,24 @@
             font-family: 'Roboto Mono', monospace;
             font-size: 12px;
             color: #555;
-            margin-bottom: 30px;
-            /* Reduced from 50px */
+            margin-bottom: 20px;
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
-        /* SECTION TITLE STYLE (/ SECTION) */
         .section-header {
             font-family: 'Roboto Mono', monospace;
             font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
-            margin-top: 25px;
-            /* Reduced from 35px */
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #000;
             display: flex;
             align-items: center;
+            border-bottom: 2px solid #000;
+            /* Subtle separator line */
+            padding-bottom: 5px;
         }
 
         .section-header::before {
@@ -92,11 +103,10 @@
             font-size: 16px;
         }
 
-        /* SIDEBAR TEXTS */
+        /* Sidebar Items */
         .contact-item {
             font-size: 13px;
             margin-bottom: 12px;
-            font-family: 'Roboto', sans-serif;
             color: #444;
         }
 
@@ -127,9 +137,9 @@
             font-size: 12px;
             line-height: 1.5;
             color: #444;
+            text-align: justify;
         }
 
-        /* SKILLS TABLE */
         .skills-container {
             font-size: 12px;
             width: 100%;
@@ -137,76 +147,10 @@
         }
 
         .skills-container td {
-            padding: 5px 0;
+            padding: 4px 0;
             border-bottom: 1px solid #ddd;
             font-weight: 500;
             color: #333;
-        }
-
-        /* --- MAIN (RIGHT COLUMN) --- */
-        .main {
-            width: 70%;
-            padding: 40px 40px;
-            /* Reduced from 60px */
-        }
-
-        .main-header {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 18px;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-            margin-bottom: 25px;
-            /* Reduced from 35px */
-            color: #000;
-            letter-spacing: -0.5px;
-        }
-
-        .main-header::before {
-            content: "/ ";
-            font-weight: 900;
-            margin-right: 5px;
-        }
-
-        /* EXPERIENCE BLOCKS */
-        .job-block {
-            margin-bottom: 20px;
-            /* Drastically reduced from 35px to gain vertical space */
-        }
-
-        .job-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #000;
-            font-family: 'Roboto', sans-serif;
-            margin-bottom: 2px;
-        }
-
-        .job-title::before {
-            content: ">> ";
-            color: #000;
-            font-family: 'Roboto Mono', monospace;
-            font-weight: 700;
-            margin-right: 8px;
-            font-size: 16px;
-        }
-
-        .job-company {
-            font-size: 13px;
-            font-weight: 500;
-            color: #666;
-            margin-bottom: 5px;
-            padding-left: 32px;
-            font-family: 'Roboto Mono', monospace;
-        }
-
-        .job-desc {
-            font-size: 13px;
-            line-height: 1.5;
-            color: #333;
-            padding-left: 32px;
-            margin: 0;
         }
 
         .interests-list {
@@ -228,6 +172,74 @@
             font-size: 12px;
         }
 
+        /* Main Content Items */
+        .main-header {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            color: #000;
+            letter-spacing: -0.5px;
+        }
+
+        .main-header::before {
+            content: "/ ";
+            font-weight: 900;
+            margin-right: 5px;
+        }
+
+        .job-block {
+            margin-bottom: 15px;
+        }
+
+        /* Minimum margin, flexbox handles the rest */
+
+        .job-title {
+            font-size: 16px;
+            /* Adjusted to fit better */
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 2px;
+        }
+
+        .job-title::before {
+            content: ">> ";
+            color: #000;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 700;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        .job-company {
+            font-size: 13px;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 5px;
+            padding-left: 28px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .job-desc {
+            font-size: 13px;
+            line-height: 1.45;
+            color: #333;
+            padding-left: 28px;
+            margin: 0;
+            text-align: justify;
+        }
+
+        /* Wrappers to group content so Flexbox doesn't break internal blocks */
+        .sidebar-group,
+        .main-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         @media print {
             body {
                 background: none;
@@ -247,118 +259,127 @@
 
     <div class="page">
         <aside class="sidebar">
-            <h1>David<br>Cooper</h1>
-            <div class="subtitle">FULLSTACK DEVELOPER<br>SENIOR</div>
+            <div class="sidebar-group">
+                <div>
+                    <h1>David<br>Cooper</h1>
+                    <div class="subtitle">FULLSTACK DEVELOPER<br>SENIOR</div>
+                </div>
 
-            <div class="section-header">CONTACTO</div>
-
-            <div class="contact-item">
-                <strong>Residencia</strong>
-                Buenos Aires, Argentina
-            </div>
-            <div class="contact-item">
-                <strong>Email</strong>
-                <a href="#" class="contact-link">dcooper.dev@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <strong>LinkedIn</strong>
-                <a href="#" class="contact-link">/in/david-cooper-developer</a>
-            </div>
-            <div class="contact-item">
-                <strong>Teléfono</strong>
-                <span class="contact-link">223-5629671</span>
+                <div>
+                    <div class="section-header">CONTACTO</div>
+                    <div class="contact-item"><strong>Residencia</strong> Buenos Aires, Argentina</div>
+                    <div class="contact-item"><strong>Email</strong> <a href="#"
+                            class="contact-link">dcooper.dev@gmail.com</a></div>
+                    <div class="contact-item"><strong>LinkedIn</strong> <a href="#"
+                            class="contact-link">/in/david-cooper-developer</a></div>
+                    <div class="contact-item"><strong>Teléfono</strong> <span class="contact-link">223-5629671</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="section-header">ACERCA DE MÍ</div>
-            <p class="about-text">
-                Desde muy pequeño me fascinaron las computadoras. Inicié con Pascal, C y C++ hasta descubrir que mi
-                pasión es la web. Busco aportar calidad técnica y trabajar en equipo.
-            </p>
+            <div class="sidebar-group">
+                <div>
+                    <div class="section-header">ACERCA DE MÍ</div>
+                    <p class="about-text">
+                        Desde muy pequeño me fascinaron las computadoras. Inicié con Pascal, C y C++ hasta descubrir que
+                        mi pasión es la web. Busco aportar calidad técnica y trabajar en equipo.
+                    </p>
+                </div>
 
-            <div class="section-header">HABILIDADES</div>
-            <table class="skills-container">
-                <tr>
-                    <td>JavaScript / TypeScript</td>
-                </tr>
-                <tr>
-                    <td>React.js / Next.js</td>
-                </tr>
-                <tr>
-                    <td>Node.js / Express</td>
-                </tr>
-                <tr>
-                    <td>HTML / CSS</td>
-                </tr>
-                <tr>
-                    <td>SQL / NoSQL</td>
-                </tr>
-                <tr>
-                    <td>Golang (Básico)</td>
-                </tr>
-                <tr>
-                    <td>Patrones de Diseño</td>
-                </tr>
-            </table>
+                <div>
+                    <div class="section-header">HABILIDADES</div>
+                    <table class="skills-container">
+                        <tr>
+                            <td>JavaScript / TypeScript</td>
+                        </tr>
+                        <tr>
+                            <td>React.js / Next.js</td>
+                        </tr>
+                        <tr>
+                            <td>Node.js / Express</td>
+                        </tr>
+                        <tr>
+                            <td>HTML / CSS</td>
+                        </tr>
+                        <tr>
+                            <td>SQL / NoSQL</td>
+                        </tr>
+                        <tr>
+                            <td>Golang (Básico)</td>
+                        </tr>
+                        <tr>
+                            <td>Patrones de Diseño</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
 
-            <div class="section-header">OTROS INTERESES</div>
-            <ul class="interests-list">
-                <li>Desarrollo de videojuegos</li>
-                <li>Crear productos digitales</li>
-                <li>Viajar y conocer culturas</li>
-            </ul>
+            <div class="sidebar-group">
+                <div class="section-header">OTROS INTERESES</div>
+                <ul class="interests-list">
+                    <li>Desarrollo de videojuegos</li>
+                    <li>Crear productos digitales</li>
+                    <li>Viajar y conocer culturas</li>
+                </ul>
+            </div>
         </aside>
 
         <main class="main">
-            <div class="main-header">EXPERIENCIA Y CRECIMIENTO</div>
 
-            <div class="job-block">
-                <div class="job-title">Senior Software Engineer</div>
-                <div class="job-company">Salesforce | Ago 2021 – Ago 2025</div>
-                <p class="job-desc">
-                    Trabajé como desarrollador Front End especializado en <strong>React.js</strong>.
-                    Formé parte de equipos internacionales ágiles, enfocándome en la escalabilidad, el code review
-                    exhaustivo y la performance de aplicaciones de alto tráfico.
-                </p>
+            <div class="main-group" style="flex-grow: 1;">
+                <div class="main-header">EXPERIENCIA Y CRECIMIENTO</div>
+
+                <div class="job-block">
+                    <div class="job-title">Senior Software Engineer</div>
+                    <div class="job-company">Salesforce | Ago 2021 – Ago 2025</div>
+                    <p class="job-desc">
+                        Trabajé como desarrollador Front End especializado en <strong>React.js</strong>.
+                        Formé parte de equipos internacionales ágiles, enfocándome en la escalabilidad, el code review
+                        exhaustivo y la performance.
+                    </p>
+                </div>
+
+                <div class="job-block">
+                    <div class="job-title">Senior Fullstack Developer</div>
+                    <div class="job-company">Technisys | Feb 2020 – Ago 2021</div>
+                    <p class="job-desc">
+                        Desarrollo Full Stack con <strong>Node.js</strong> para Fintech.
+                        Participé en la arquitectura de microservicios para la billetera FPay (Falabella), asegurando
+                        alta disponibilidad.
+                    </p>
+                </div>
+
+                <div class="job-block">
+                    <div class="job-title">Technical Leader</div>
+                    <div class="job-company">Portal Automotor | Dic 2018 – May 2020</div>
+                    <p class="job-desc">
+                        Liderazgo técnico. Diseñé la arquitectura base utilizando <strong>Angular y TypeScript</strong>,
+                        estableciendo estándares de código y CI/CD.
+                    </p>
+                </div>
+
+                <div class="job-block">
+                    <div class="job-title">Freelance Experience</div>
+                    <div class="job-company">2015 – 2018</div>
+                    <p class="job-desc">
+                        Desarrollé múltiples proyectos a medida: e-commerce, educativas y gestión de stock, utilizando
+                        MongoDB, Express, Angular y Node.js.
+                    </p>
+                </div>
             </div>
 
-            <div class="job-block">
-                <div class="job-title">Senior Fullstack Developer</div>
-                <div class="job-company">Technisys | Feb 2020 – Ago 2021</div>
-                <p class="job-desc">
-                    Desarrollo Full Stack con <strong>Node.js</strong> para la industria Fintech.
-                    Participé en la arquitectura y construcción de microservicios para la billetera virtual FPay
-                    (Falabella), asegurando consistencia transaccional y alta disponibilidad.
-                </p>
-            </div>
+            <div class="main-group">
+                <div class="main-header">EDUCACIÓN</div>
 
-            <div class="job-block">
-                <div class="job-title">Technical Leader</div>
-                <div class="job-company">Portal Automotor | Dic 2018 – May 2020</div>
-                <p class="job-desc">
-                    Responsable de liderar al equipo técnico. Diseñé la arquitectura base de la plataforma utilizando
-                    <strong>Angular y TypeScript</strong>, estableciendo estándares de código y procesos de CI/CD.
-                </p>
-            </div>
+                <div class="job-block">
+                    <div class="job-title">Técnico Superior en Sistemas</div>
+                    <div class="job-company">Instituto Superior 151 | 2012 - 2017</div>
+                </div>
 
-            <div class="job-block">
-                <div class="job-title">Freelance Experience</div>
-                <div class="job-company">2015 – 2018</div>
-                <p class="job-desc">
-                    Desarrollé múltiples proyectos a medida: desde e-commerce y plataformas educativas hasta sistemas de
-                    gestión de stock, utilizando MongoDB, Express, Angular y Node.js.
-                </p>
-            </div>
-
-            <div class="main-header" style="margin-top: 30px;">EDUCACIÓN</div>
-
-            <div class="job-block">
-                <div class="job-title">Técnico Superior en Sistemas</div>
-                <div class="job-company">Instituto Superior 151 | 2012 - 2017</div>
-            </div>
-
-            <div class="job-block">
-                <div class="job-title">Profesorado en Matemática</div>
-                <div class="job-company">Univ. Nacional de Mar del Plata | 2010 - 2011</div>
+                <div class="job-block">
+                    <div class="job-title">Profesorado en Matemática</div>
+                    <div class="job-company">Univ. Nacional de Mar del Plata | 2010 - 2011</div>
+                </div>
             </div>
 
         </main>
