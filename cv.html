@@ -25,30 +25,32 @@
 
         .page {
             width: 210mm;
-            min-height: 297mm;
+            height: 297mm;
+            /* Force exact A4 height */
             background: white;
             display: flex;
             position: relative;
+            overflow: hidden;
+            /* This avoids creating a 2nd page due to a rogue pixel */
         }
 
         /* --- SIDEBAR (LEFT COLUMN) --- */
         .sidebar {
             width: 30%;
-            /* Reduced width slightly to balance */
             background-color: #f4f6f8;
-            /* A slightly more bluish and modern gray */
-            padding: 50px 25px;
+            padding: 40px 25px;
+            /* Reduced from 50px */
             display: flex;
             flex-direction: column;
             color: #333;
             border-right: 1px solid #e0e0e0;
-            /* Subtle separator */
         }
 
         /* NAMES AND TITLES */
         h1 {
             font-family: 'Roboto Mono', monospace;
-            font-size: 34px;
+            font-size: 32px;
+            /* Slightly reduced */
             line-height: 1;
             text-transform: uppercase;
             margin: 0 0 10px 0;
@@ -59,22 +61,24 @@
 
         .subtitle {
             font-family: 'Roboto Mono', monospace;
-            font-size: 13px;
+            font-size: 12px;
             color: #555;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
+            /* Reduced from 50px */
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
-        /* SECTION HEADER STYLE (/ SECTION) */
+        /* SECTION TITLE STYLE (/ SECTION) */
         .section-header {
             font-family: 'Roboto Mono', monospace;
             font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
-            margin-top: 35px;
-            margin-bottom: 15px;
+            margin-top: 25px;
+            /* Reduced from 35px */
+            margin-bottom: 10px;
             color: #000;
             display: flex;
             align-items: center;
@@ -91,17 +95,17 @@
         /* SIDEBAR TEXTS */
         .contact-item {
             font-size: 13px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-family: 'Roboto', sans-serif;
             color: #444;
         }
 
         .contact-item strong {
             display: block;
-            font-size: 11px;
+            font-size: 10px;
             color: #777;
             text-transform: uppercase;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             font-weight: 700;
         }
 
@@ -111,7 +115,6 @@
             font-weight: 500;
         }
 
-        /* Tech arrow in links */
         .contact-link::before {
             content: ">> ";
             color: #666;
@@ -121,20 +124,20 @@
         }
 
         .about-text {
-            font-size: 13px;
-            line-height: 1.6;
+            font-size: 12px;
+            line-height: 1.5;
             color: #444;
         }
 
         /* SKILLS TABLE */
         .skills-container {
-            font-size: 13px;
+            font-size: 12px;
             width: 100%;
             border-collapse: collapse;
         }
 
         .skills-container td {
-            padding: 6px 0;
+            padding: 5px 0;
             border-bottom: 1px solid #ddd;
             font-weight: 500;
             color: #333;
@@ -143,7 +146,8 @@
         /* --- MAIN (RIGHT COLUMN) --- */
         .main {
             width: 70%;
-            padding: 60px 45px;
+            padding: 40px 40px;
+            /* Reduced from 60px */
         }
 
         .main-header {
@@ -152,8 +156,9 @@
             font-weight: 700;
             text-transform: uppercase;
             border-bottom: 2px solid #000;
-            padding-bottom: 10px;
-            margin-bottom: 35px;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            /* Reduced from 35px */
             color: #000;
             letter-spacing: -0.5px;
         }
@@ -166,7 +171,8 @@
 
         /* EXPERIENCE BLOCKS */
         .job-block {
-            margin-bottom: 35px;
+            margin-bottom: 20px;
+            /* Drastically reduced from 35px to gain vertical space */
         }
 
         .job-title {
@@ -174,7 +180,7 @@
             font-weight: 700;
             color: #000;
             font-family: 'Roboto', sans-serif;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .job-title::before {
@@ -187,24 +193,22 @@
         }
 
         .job-company {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             color: #666;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             padding-left: 32px;
-            /* Aligned with title text */
             font-family: 'Roboto Mono', monospace;
         }
 
         .job-desc {
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 13px;
+            line-height: 1.5;
             color: #333;
             padding-left: 32px;
             margin: 0;
         }
 
-        /* Interests list adjustment */
         .interests-list {
             list-style: none;
             padding: 0;
@@ -212,8 +216,8 @@
         }
 
         .interests-list li {
-            margin-bottom: 6px;
-            font-size: 13px;
+            margin-bottom: 4px;
+            font-size: 12px;
             color: #444;
         }
 
@@ -233,6 +237,7 @@
                 width: 100%;
                 height: 100%;
                 box-shadow: none;
+                overflow: hidden;
             }
         }
     </style>
@@ -344,7 +349,7 @@
                 </p>
             </div>
 
-            <div class="main-header" style="margin-top: 50px;">EDUCACIÓN</div>
+            <div class="main-header" style="margin-top: 30px;">EDUCACIÓN</div>
 
             <div class="job-block">
                 <div class="job-title">Técnico Superior en Sistemas</div>
