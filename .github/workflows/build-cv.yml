@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*' # Se dispara solo con tags como v1.0, v2026.1, etc.
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
