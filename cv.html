@@ -30,8 +30,8 @@
         }
 
         .page {
-            width: 210mm;
-            height: 297mm;
+            max-width: 210mm;
+            height: 100vh;
             /* Fixed A4 height */
             background: white;
             display: flex;
@@ -50,11 +50,6 @@
             /* Background is now handled by the parent .page gradient to prevent whitespace */
             padding: 40px 25px;
             border-right: 1px solid #e0e0e0;
-
-            /* Keep vertical distribution */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             height: 100%;
         }
 
@@ -62,11 +57,6 @@
         .main {
             width: 70%;
             padding: 40px 40px;
-
-            /* Keep vertical distribution */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             height: 100%;
         }
 
