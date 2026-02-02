@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Cooper - CV Responsive</title>
+    <title>David Cooper - CV Final</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+        /* FORCE PRINT SETTINGS TO REMOVE BROWSER MARGINS */
+        @page {
+            size: A4;
+            margin: 0;
+        }
 
         * {
             box-sizing: border-box;
@@ -31,16 +37,21 @@
             display: flex;
             position: relative;
             overflow: hidden;
+
+            /* FAUX COLUMN TRICK: 
+               This gradient ensures the gray sidebar background extends 
+               to the absolute bottom of the page, even if content ends earlier. */
+            background: linear-gradient(to right, #f4f6f8 30%, white 30%);
         }
 
         /* --- SIDEBAR (LEFT COLUMN) --- */
         .sidebar {
             width: 30%;
-            background-color: #f4f6f8;
+            /* Background is now handled by the parent .page gradient to prevent whitespace */
             padding: 40px 25px;
             border-right: 1px solid #e0e0e0;
 
-            /* VERTICAL JUSTIFICATION MAGIC */
+            /* Keep vertical distribution */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -52,7 +63,7 @@
             width: 70%;
             padding: 40px 40px;
 
-            /* VERTICAL JUSTIFICATION MAGIC */
+            /* Keep vertical distribution */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -91,7 +102,6 @@
             display: flex;
             align-items: center;
             border-bottom: 2px solid #000;
-            /* Subtle separator line */
             padding-bottom: 5px;
         }
 
@@ -133,11 +143,12 @@
             margin-right: 3px;
         }
 
+        /* CHANGED: Removed 'text-align: justify' as requested */
         .about-text {
             font-size: 12px;
             line-height: 1.5;
             color: #444;
-            text-align: justify;
+            text-align: left;
         }
 
         .skills-container {
@@ -195,11 +206,8 @@
             margin-bottom: 15px;
         }
 
-        /* Minimum margin, flexbox handles the rest */
-
         .job-title {
             font-size: 16px;
-            /* Adjusted to fit better */
             font-weight: 700;
             color: #000;
             margin-bottom: 2px;
@@ -232,7 +240,7 @@
             text-align: justify;
         }
 
-        /* Wrappers to group content so Flexbox doesn't break internal blocks */
+        /* Wrappers for flex distribution */
         .sidebar-group,
         .main-group {
             display: flex;
@@ -250,6 +258,7 @@
                 height: 100%;
                 box-shadow: none;
                 overflow: hidden;
+                margin: 0;
             }
         }
     </style>
