@@ -30,18 +30,18 @@
         }
 
         .page {
-            max-width: 210mm;
-            height: 100vh;
-            /* Fixed A4 height */
-            background: white;
+            /* Medidas exactas A4 para que Puppeteer no dude */
+            width: 210mm;
+            height: 297mm;
+
+            /* Tu solución del gradiente (¡Perfecta!) */
+            background: linear-gradient(to right, #f4f6f8 30%, white 30%);
+
             display: flex;
             position: relative;
             overflow: hidden;
-
-            /* FAUX COLUMN TRICK: 
-               This gradient ensures the gray sidebar background extends 
-               to the absolute bottom of the page, even if content ends earlier. */
-            background: linear-gradient(to right, #f4f6f8 30%, white 30%);
+            margin: 0;
+            /* Aseguramos que no haya márgenes externos */
         }
 
         /* --- SIDEBAR (LEFT COLUMN) --- */
