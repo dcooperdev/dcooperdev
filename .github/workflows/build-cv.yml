@@ -24,12 +24,14 @@ jobs:
       - name: 📦 Install Dependencies
         run: npm install
 
-      - name: 📄 Generate PDF
+      - name: 📄 Generate PDFs (ES + EN)
         run: node generate.js
 
       - name: 🚀 Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: David_Cooper_CV.pdf
+          files: |
+            David_Cooper_CV.pdf
+            David_Cooper_CV_EN.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

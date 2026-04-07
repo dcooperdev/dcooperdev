@@ -7,7 +7,7 @@ Soy un **Senior Full Stack Developer** especializado en el ecosistema JavaScript
 > 💡 **Nota sobre este repositorio:**
 > Este no es un simple archivo. Mi CV está definido como código (`HTML/CSS`) y se compila automáticamente a PDF utilizando **Puppeteer** y **GitHub Actions** cada vez que genero una nueva versión.
 >
-> [**📥 Descargar Última Versión del CV (PDF)**](https://github.com/dcooperdev/dcooperdev/releases/latest/download/David_Cooper_CV.pdf)
+> [**📥 Descargar CV en Español (PDF)**](https://github.com/dcooperdev/dcooperdev/releases/latest/download/David_Cooper_CV.pdf) &nbsp;|&nbsp; [**📥 Download CV in English (PDF)**](https://github.com/dcooperdev/dcooperdev/releases/latest/download/David_Cooper_CV_EN.pdf)
 
 ---
 
@@ -26,9 +26,9 @@ Vengo de trabajar 4 años en entornos corporativos de alto nivel (**Salesforce**
 
 ### 🛠️ Cómo funciona este CV
 Este repositorio utiliza una estrategia de **Infrastructure as Code** para documentación personal:
-1.  **Source:** El diseño está en `cv.html` usando CSS3 moderno (Flexbox).
-2.  **Build:** Un script de Node.js (`generate.js`) usa Chrome Headless (vía Puppeteer) para renderizar el PDF.
-3.  **CI/CD:** GitHub Actions detecta nuevos Tags (`v*`), compila el documento y lo publica en los Releases.
+1.  **Source:** El diseño está en `cv.html` (ES) y `cv_en.html` (EN) usando CSS3 moderno (Flexbox).
+2.  **Build:** Un script de Node.js (`generate.js`) usa Chrome Headless (vía Puppeteer) para renderizar ambos PDFs.
+3.  **CI/CD:** GitHub Actions detecta nuevos Tags (`v*`), compila ambas versiones y las publica en los Releases.
 
 ---
 📫 **Contacto:**

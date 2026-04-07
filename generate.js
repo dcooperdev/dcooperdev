@@ -2,26 +2,28 @@
 const puppeteer = require('puppeteer');
 const path = require('path');
 
-(async () => {
+async function generatePDF(inputFile, outputFile) {
     const browser = await puppeteer.launch({
         headless: 'new',
-        // Add these arguments to make it work in GitHub Actions:
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     const page = await browser.newPage();
 
-    // Loads the local file
-    const filePath = path.join(__dirname, 'cv.html');
+    const filePath = path.join(__dirname, inputFile);
     await page.goto(`file:${filePath}`, { waitUntil: 'networkidle0' });
 
-    // Generates the PDF with the same options used manually
     await page.pdf({
-        path: 'David_Cooper_CV.pdf',
+        path: outputFile,
         format: 'A4',
-        printBackground: true, // Important for background colors to appear
-        margin: { top: '0', right: '0', bottom: '0', left: '0' } // No extra margins
+        printBackground: true,
+        margin: { top: '0', right: '0', bottom: '0', left: '0' }
     });
 
     await browser.close();
-    console.log('✅ PDF Generated Successfully: David_Cooper_CV.pdf');
+    console.log(`✅ PDF Generated Successfully: ${outputFile}`);
+}
+
+(async () => {
+    await generatePDF('cv.html', 'David_Cooper_CV.pdf');
+    await generatePDF('cv_en.html', 'David_Cooper_CV_EN.pdf');
 })();
