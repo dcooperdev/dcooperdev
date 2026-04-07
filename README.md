@@ -1,36 +1,36 @@
-# Hola, soy David Cooper 👋
+# Hi, I'm David Cooper 👋
 
 ![Build Status](https://github.com/dcooperdev/dcooperdev/actions/workflows/build-cv.yml/badge.svg)
 
-Soy un **Senior Full Stack Developer** especializado en el ecosistema JavaScript (React, Node.js).
+I'm a **Senior Full Stack Developer** specialized in the JavaScript ecosystem (React, Node.js).
 
-> 💡 **Nota sobre este repositorio:**
-> Este no es un simple archivo. Mi CV está definido como código (`HTML/CSS`) y se compila automáticamente a PDF utilizando **Puppeteer** y **GitHub Actions** cada vez que genero una nueva versión.
+> 💡 **About this repository:**
+> This is not just a simple file. My CV is defined as code (`HTML/CSS`) and automatically compiled to PDF using **Puppeteer** and **GitHub Actions** every time I release a new version.
 >
-> [**📥 Descargar CV en Español (PDF)**](https://github.com/dcooperdev/dcooperdev/releases/latest/download/David_Cooper_CV.pdf) &nbsp;|&nbsp; [**📥 Download CV in English (PDF)**](https://github.com/dcooperdev/dcooperdev/releases/latest/download/David_Cooper_CV_EN.pdf)
+> [**📥 Download CV in Spanish (PDF)**](https://github.com/dcooperdev/dcooperdev/releases/latest/download/David_Cooper_CV.pdf) &nbsp;|&nbsp; [**📥 Download CV in English (PDF)**](https://github.com/dcooperdev/dcooperdev/releases/latest/download/David_Cooper_CV_EN.pdf)
 
 ---
 
-### 🔭 Estado Actual
+### 🔭 Current Status
 - **Focus:** React + TypeScript + Vite.
-- **Proyecto Actual:** Construyendo un [Sistema de Gestión de Turnos](#) para demostración técnica de arquitectura frontend moderna.
+- **Current Project:** Building an [Appointment Management System](#) as a technical showcase of modern frontend architecture.
 
-### 💼 Experiencia & Timeline
-Vengo de trabajar 4 años en entornos corporativos de alto nivel (**Salesforce**, **Technisys**), donde la mayor parte de mi código ha sido propietario y privado.
+### 💼 Experience & Timeline
+I come from 4 years working in high-level corporate environments (**Salesforce**, **Technisys**), where most of my code has been proprietary and private.
 
 - **2021 - 2025:** Salesforce (Senior Software Engineer)
 - **2020 - 2021:** Technisys (Senior Fullstack Developer)
 - **2018 - 2020:** Portal Automotor (Tech Lead)
 
-*Mis repositorios públicos antiguos (abajo) son un registro de mi evolución desde 2019, aunque no reflejan mi stack o seniority actual.*
+*My older public repositories (below) are a record of my evolution since 2019, though they don't reflect my current stack or seniority level.*
 
-### 🛠️ Cómo funciona este CV
-Este repositorio utiliza una estrategia de **Infrastructure as Code** para documentación personal:
-1.  **Source:** El diseño está en `cv.html` (ES) y `cv_en.html` (EN) usando CSS3 moderno (Flexbox).
-2.  **Build:** Un script de Node.js (`generate.js`) usa Chrome Headless (vía Puppeteer) para renderizar ambos PDFs.
-3.  **CI/CD:** GitHub Actions detecta nuevos Tags (`v*`), compila ambas versiones y las publica en los Releases.
+### 🛠️ How this CV works
+This repository uses an **Infrastructure as Code** strategy for personal documentation:
+1.  **Source:** The design lives in `cv.html` (ES) and `cv_en.html` (EN) using modern CSS3 (Flexbox).
+2.  **Build:** A Node.js script (`generate.js`) uses Headless Chrome (via Puppeteer) to render both PDFs.
+3.  **CI/CD:** GitHub Actions detects new Tags (`v*`), compiles both versions and publishes them to Releases.
 
 ---
-📫 **Contacto:**
+📫 **Contact:**
 - [dcooper.dev@gmail.com](mailto:dcooper.dev@gmail.com)
 - [LinkedIn Profile](https://www.linkedin.com/in/david-cooper-developer)
