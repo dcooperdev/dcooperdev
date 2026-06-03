@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Cooper - CV Final</title>
+    <title>David Cooper - CV</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
-        /* FORCE PRINT SETTINGS TO REMOVE BROWSER MARGINS */
         @page {
             size: A4;
             margin: 0;
@@ -30,43 +29,34 @@
         }
 
         .page {
-            /* Medidas exactas A4 para que Puppeteer no dude */
             width: 210mm;
             height: 297mm;
-
-            /* Tu solución del gradiente (¡Perfecta!) */
             background: linear-gradient(to right, #f4f6f8 30%, white 30%);
-
             display: flex;
             position: relative;
             overflow: hidden;
             margin: 0;
-            /* Aseguramos que no haya márgenes externos */
         }
 
-        /* --- SIDEBAR (LEFT COLUMN) --- */
         .sidebar {
             width: 30%;
-            /* Background is now handled by the parent .page gradient to prevent whitespace */
-            padding: 40px 25px;
+            padding: 25px 20px;
             border-right: 1px solid #e0e0e0;
             height: 100%;
         }
 
-        /* --- MAIN (RIGHT COLUMN) --- */
         .main {
             width: 70%;
-            padding: 40px 40px;
+            padding: 25px 35px;
             height: 100%;
         }
 
-        /* General Text Styles */
         h1 {
             font-family: 'Roboto Mono', monospace;
-            font-size: 32px;
+            font-size: 30px;
             line-height: 1;
             text-transform: uppercase;
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
             letter-spacing: -1px;
             color: #000;
             font-weight: 700;
@@ -74,9 +64,9 @@
 
         .subtitle {
             font-family: 'Roboto Mono', monospace;
-            font-size: 12px;
+            font-size: 11px;
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -84,15 +74,15 @@
 
         .section-header {
             font-family: 'Roboto Mono', monospace;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #000;
             display: flex;
             align-items: center;
             border-bottom: 2px solid #000;
-            padding-bottom: 5px;
+            padding-bottom: 4px;
         }
 
         .section-header::before {
@@ -100,13 +90,12 @@
             color: #000;
             margin-right: 5px;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 15px;
         }
 
-        /* Sidebar Items */
         .contact-item {
-            font-size: 13px;
-            margin-bottom: 12px;
+            font-size: 12px;
+            margin-bottom: 8px;
             color: #444;
         }
 
@@ -115,7 +104,7 @@
             font-size: 10px;
             color: #777;
             text-transform: uppercase;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
             font-weight: 700;
         }
 
@@ -133,22 +122,21 @@
             margin-right: 3px;
         }
 
-        /* CHANGED: Removed 'text-align: justify' as requested */
         .about-text {
-            font-size: 12px;
-            line-height: 1.5;
+            font-size: 11.5px;
+            line-height: 1.4;
             color: #444;
             text-align: left;
         }
 
         .skills-container {
-            font-size: 12px;
+            font-size: 11.5px;
             width: 100%;
             border-collapse: collapse;
         }
 
         .skills-container td {
-            padding: 4px 0;
+            padding: 3px 0;
             border-bottom: 1px solid #ddd;
             font-weight: 500;
             color: #333;
@@ -161,27 +149,27 @@
         }
 
         .interests-list li {
-            margin-bottom: 4px;
-            font-size: 12px;
+            margin-bottom: 8px;
+            font-size: 11px;
             color: #444;
+            line-height: 1.3;
         }
 
         .interests-list li::before {
             content: "> ";
             font-family: 'Roboto Mono', monospace;
             font-weight: 700;
-            font-size: 12px;
+            font-size: 11px;
         }
 
-        /* Main Content Items */
         .main-header {
             font-family: 'Roboto Mono', monospace;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             text-transform: uppercase;
             border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
+            padding-bottom: 4px;
+            margin-bottom: 15px;
             color: #000;
             letter-spacing: -0.5px;
         }
@@ -193,11 +181,11 @@
         }
 
         .job-block {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .job-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: #000;
             margin-bottom: 2px;
@@ -209,40 +197,54 @@
             font-family: 'Roboto Mono', monospace;
             font-weight: 700;
             margin-right: 5px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .job-company {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
             color: #666;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             padding-left: 28px;
             font-family: 'Roboto Mono', monospace;
         }
 
         .job-desc {
-            font-size: 13px;
-            line-height: 1.45;
+            font-size: 11.5px;
+            line-height: 1.35;
             color: #333;
             padding-left: 28px;
             margin: 0;
-            text-align: justify;
+            text-align: left;
         }
 
-        /* Wrappers for flex distribution */
+        .job-desc ul {
+            margin: 3px 0 0 0;
+            padding-left: 15px;
+        }
+
+        .job-desc li {
+            margin-bottom: 3px;
+        }
+
+        .tech-stack {
+            font-size: 10px;
+            font-weight: 700;
+            color: #555;
+            margin-top: 3px;
+            padding-left: 28px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
         .sidebar-group,
         .main-group {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
 
         @media print {
-            body {
-                background: none;
-            }
-
+            body { background: none; }
             .page {
                 width: 100%;
                 height: 297mm;
@@ -255,24 +257,20 @@
 </head>
 
 <body>
-
     <div class="page">
         <aside class="sidebar">
             <div class="sidebar-group">
                 <div>
                     <h1>David<br>Cooper</h1>
-                    <div class="subtitle">FULLSTACK DEVELOPER<br>SENIOR</div>
+                    <div class="subtitle">SENIOR SOFTWARE DEVELOPER</div>
                 </div>
 
                 <div>
                     <div class="section-header">CONTACTO</div>
                     <div class="contact-item"><strong>Residencia</strong> Buenos Aires, Argentina</div>
-                    <div class="contact-item"><strong>Email</strong> <a href="#"
-                            class="contact-link">dcooper.dev@gmail.com</a></div>
-                    <div class="contact-item"><strong>LinkedIn</strong> <a href="#"
-                            class="contact-link">/in/david-cooper-developer</a></div>
-                    <div class="contact-item"><strong>Teléfono</strong> <span class="contact-link">223-5629671</span>
-                    </div>
+                    <div class="contact-item"><strong>Email</strong> <a href="mailto:dcooper.dev@gmail.com" class="contact-link">dcooper.dev@gmail.com</a></div>
+                    <div class="contact-item"><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/david-cooper-developer/" class="contact-link">/in/david-cooper-developer</a></div>
+                    <div class="contact-item"><strong>Teléfono</strong> <span class="contact-link">223-5629671</span></div>
                 </div>
             </div>
 
@@ -280,109 +278,98 @@
                 <div>
                     <div class="section-header">ACERCA DE MÍ</div>
                     <p class="about-text">
-                        Senior Software Developer especializado en arquitecturas web de alta disponibilidad. Con bases sólidas en lenguajes de bajo nivel (C/C++), enfoco mi trabajo en la resolución de problemas críticos, la optimización de rendimiento y el ownership integral del producto. Priorizo la calidad técnica y el mentoreo en entornos colaborativos.
+                        Senior Software Developer especializado en arquitecturas web de alta disponibilidad. Con bases sólidas en lenguajes de bajo nivel (C/C++), enfoco mi trabajo en la resolución de problemas críticos, la optimización de rendimiento y el ownership integral del producto. Priorizo la calidad técnica y el mentoreo.
                     </p>
                 </div>
 
                 <div>
-                    <div class="section-header">HABILIDADES</div>
+                    <div class="section-header">IDIOMAS</div>
                     <table class="skills-container">
-                        <tr>
-                            <td>JavaScript / TypeScript</td>
-                        </tr>
-                        <tr>
-                            <td>React.js / Next.js</td>
-                        </tr>
-                        <tr>
-                            <td>Node.js / Express</td>
-                        </tr>
-                        <tr>
-                            <td>HTML / CSS</td>
-                        </tr>
-                        <tr>
-                            <td>SQL / NoSQL</td>
-                        </tr>
-                        <tr>
-                            <td>Golang (Básico)</td>
-                        </tr>
-                        <tr>
-                            <td>Patrones de Diseño</td>
-                        </tr>
+                        <tr><td>Español (Nativo)</td></tr>
+                        <tr><td>Inglés (B2)</td></tr>
                     </table>
                 </div>
             </div>
 
             <div class="sidebar-group">
-                <div class="section-header">OTROS INTERESES</div>
+                <div class="section-header">LOGROS Y CERT.</div>
                 <ul class="interests-list">
-                    <li>Desarrollo de videojuegos</li>
-                    <li>Crear productos digitales</li>
-                    <li>Viajar y conocer culturas</li>
+                    <li><strong>Primeros Auxilios (Certificado):</strong> Cruz Roja Argentina.</li>
+                    <li><strong>Galt:</strong> Desarrollo de agente de seguridad multiplataforma corporativo. <em>(Stack: Python, Firestore, Pytest/TDD)</em>.</li>
+                    <li><strong>TraderAI:</strong> Sistema autónomo de trading de criptomonedas con LLMs y notificaciones vía Telegram. <em>(Stack: Python, Asyncio, Pandas, Telebot)</em>.</li>
                 </ul>
             </div>
         </aside>
 
         <main class="main">
-
             <div class="main-group" style="flex-grow: 1;">
-                <div class="main-header">EXPERIENCIA Y CRECIMIENTO</div>
+                <div class="main-header">EXPERIENCIA PROFESIONAL</div>
 
                 <div class="job-block">
-                    <div class="job-title">Senior Software Engineer</div>
+                    <div class="job-title">Senior Software Developer</div>
                     <div class="job-company">Salesforce | Ago 2021 – Ago 2025</div>
-                    <p class="job-desc">
-                        Trabajé como desarrollador Front End especializado en <strong>React.js</strong>.
-                        Formé parte de equipos internacionales ágiles, enfocándome en la escalabilidad, el code review
-                        exhaustivo y la performance.
-                    </p>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Implementé Storybook para testing de componentes React en la UI global de MuleSoft, garantizando accesibilidad internacional (WCAG).</li>
+                            <li>Optimicé tiempos de carga en 10-15s y reduje el bundle en 5-10 MB refactorizando módulos síncronos de Angular hacia Web Components.</li>
+                            <li>Resolví fallos silenciosos en APIs Node.js complejas con manejo estricto de errores (try-catch) e integración con PagerDuty para alertas.</li>
+                            <li>Lideré la coordinación técnica de despliegues quincenales, ejecutando resolución de conflictos, guardias activas y rollbacks críticos.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">Stack: Angular, Node.js, Express, React, Storybook, Web Components.</div>
                 </div>
 
                 <div class="job-block">
                     <div class="job-title">Senior Fullstack Developer</div>
                     <div class="job-company">Technisys | Feb 2020 – Ago 2021</div>
-                    <p class="job-desc">
-                        Desarrollo Full Stack con <strong>Node.js</strong> para Fintech.
-                        Participé en la arquitectura de microservicios para la billetera FPay (Falabella), asegurando
-                        alta disponibilidad.
-                    </p>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Desarrollé microservicios transaccionales para la billetera virtual FPay (Falabella), asegurando alta disponibilidad.</li>
+                            <li>Diseñé un middleware de seguridad perimetral para validar JSON Web Tokens (JWT), descartando peticiones no autorizadas.</li>
+                            <li>Integré requerimientos de negocio interactuando directamente con un core bancario legacy para procesar pagos y devoluciones.</li>
+                            <li>Optimicé el consumo de datos en frontend adaptando respuestas JSON para mitigar la saturación de red en móviles.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">Stack: Node.js, Express, React, Microservicios.</div>
                 </div>
 
                 <div class="job-block">
                     <div class="job-title">Technical Leader</div>
                     <div class="job-company">Portal Automotor | Dic 2018 – May 2020</div>
-                    <p class="job-desc">
-                        Liderazgo técnico. Diseñé la arquitectura base utilizando <strong>Angular y TypeScript</strong>,
-                        estableciendo estándares de código y CI/CD.
-                    </p>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Diseñé la arquitectura de un marketplace automotriz con motores de búsqueda y filtros de geolocalización.</li>
+                            <li>Establecí estándares de código e implementé pipelines de CI/CD para automatizar despliegues.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">Stack: Angular, TypeScript, Node.js.</div>
                 </div>
 
                 <div class="job-block">
-                    <div class="job-title">Freelance Experience</div>
-                    <div class="job-company">2015 – 2018</div>
-                    <p class="job-desc">
-                        Desarrollé múltiples proyectos a medida: e-commerce, educativas y gestión de stock, utilizando
-                        MongoDB, Express, Angular y Node.js.
-                    </p>
+                    <div class="job-title">Fullstack Developer (Freelance)</div>
+                    <div class="job-company">Independiente | 2015 – 2018</div>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Desarrollé una plataforma de tutorías con mapas, pagos vía MercadoPago y validación de credenciales docentes.</li>
+                            <li>Construí sistemas e-commerce y plataformas de inventario para industrias minera y óptica.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">Stack: MongoDB, Express, Angular, Node.js.</div>
                 </div>
             </div>
 
             <div class="main-group">
                 <div class="main-header">EDUCACIÓN</div>
-
                 <div class="job-block">
                     <div class="job-title">Técnico Superior en Sistemas</div>
                     <div class="job-company">Instituto Superior 151 | 2012 - 2017</div>
                 </div>
-
                 <div class="job-block">
                     <div class="job-title">Profesorado en Matemática</div>
                     <div class="job-company">Univ. Nacional de Mar del Plata | 2010 - 2011</div>
                 </div>
             </div>
-
         </main>
     </div>
-
 </body>
-
 </html>
