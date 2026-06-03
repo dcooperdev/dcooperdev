@@ -12,8 +12,8 @@ I'm a **Senior Full Stack Developer** specialized in the JavaScript ecosystem (R
 ---
 
 ### 🔭 Current Status
-- **Focus:** React + TypeScript + Vite.
-- **Current Project:** Building an [Appointment Management System](#) as a technical showcase of modern frontend architecture.
+- **Focus:** React + TypeScript + Vite / Python.
+- **Current Project:** Building **TraderAI** hosted on a Raspberry Pi 4. It is an autonomous cryptocurrency trading system built with Python that utilizes Large Language Models (LLMs) for market sentiment analysis, incorporates an evolutionary engine to continuously optimize its trading strategies, and sends real-time execution alerts via Telegram.
 
 ### 💼 Experience & Timeline
 I come from 4 years working in high-level corporate environments (**Salesforce**, **Technisys**), where most of my code has been proprietary and private.
