@@ -181,7 +181,7 @@
         }
 
         .job-block {
-            margin-bottom: 12px;
+            margin-bottom: 0;
         }
 
         .job-title {
@@ -211,7 +211,7 @@
 
         .job-desc {
             font-size: 11.5px;
-            line-height: 1.35;
+            line-height: 1.28;
             color: #333;
             padding-left: 28px;
             margin: 0;
@@ -240,7 +240,7 @@
         .main-group {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 9px;
         }
 
         @media print {
@@ -262,7 +262,7 @@
             <div class="sidebar-group">
                 <div>
                     <h1>David<br>Cooper</h1>
-                    <div class="subtitle">SENIOR SOFTWARE DEVELOPER</div>
+                    <div class="subtitle">SENIOR SOFTWARE ENGINEER</div>
                 </div>
 
                 <div>
@@ -279,7 +279,7 @@
                 <div>
                     <div class="section-header">ABOUT ME</div>
                     <p class="about-text">
-                        Senior Software Developer specializing in high-availability web architectures. Grounded in a strong foundation in low-level languages (C/C++), I focus on solving critical issues, performance optimization, and end-to-end product ownership. I prioritize technical excellence.
+                        Senior Software Engineer specializing in critical, high-availability full-stack architectures. I connect complex business requirements with robust technical execution through TDD, solid design patterns, and clean code. Proven track record in fast-paced international agile teams, prioritizing performance, security, and operational stability. Currently expanding into Python and applied AI through independent projects.
                     </p>
                 </div>
 
@@ -293,11 +293,21 @@
             </div>
 
             <div class="sidebar-group">
+                <div class="section-header">TECHNICAL SKILLS</div>
+                <table class="skills-container">
+                    <tr><td><strong>Frontend:</strong> React, Angular, TypeScript, Web Components</td></tr>
+                    <tr><td><strong>Backend:</strong> Node.js, Express, Microservices, REST/JWT</td></tr>
+                    <tr><td><strong>Data:</strong> PostgreSQL, MongoDB, Firebase/Firestore</td></tr>
+                    <tr><td><strong>AI & Scripting:</strong> Python, Pandas, Asyncio, LLMs</td></tr>
+                    <tr><td><strong>Practices:</strong> TDD, CI/CD, High Availability</td></tr>
+                </table>
+            </div>
+
+            <div class="sidebar-group">
                 <div class="section-header">ACHIEVEMENTS & CERT.</div>
                 <ul class="interests-list">
                     <li><strong>First Aid Certification:</strong> Argentine Red Cross.</li>
-                    <li><strong>Galt:</strong> Developed a multi-platform security agent for corporate system auditing. <em>(Stack: Python, Firestore, Pytest/TDD)</em>.</li>
-                    <li><strong>TraderAI:</strong> Engineered an autonomous cryptocurrency trading system with LLMs and Telegram notifications. <em>(Stack: Python, Asyncio, Pandas, Telebot)</em>.</li>
+                    <li><strong>Teaching:</strong> Computer Science Instructor, Instituto Bristol (2010–2020, 10 years).</li>
                 </ul>
             </div>
         </aside>
@@ -307,17 +317,29 @@
                 <div class="main-header">EXPERIENCE & GROWTH</div>
 
                 <div class="job-block">
+                    <div class="job-title">Senior Software Engineer (Independent/Freelance)</div>
+                    <div class="job-company">Independent | Aug 2025 – Present</div>
+                    <div class="job-desc">
+                        <ul>
+                            <li><strong>Galt:</strong> designed and built a multi-platform security agent (Windows, macOS, Linux) in Python, compiled to native executables, with TDD to ensure system stability. Integrated local databases and Firestore for automated audits and executive reporting.</li>
+                            <li><strong>Darwin</strong> (evolution of TraderAI): engineered a multi-purpose autonomous trading system with multi-currency/crypto support, a database-agnostic architecture, and strict transaction/system logs for legal auditing and early failure detection.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">Stack: Python, Firestore, TDD/Pytest, Asyncio, Pandas, LLMs.</div>
+                </div>
+
+                <div class="job-block">
                     <div class="job-title">Senior Software Developer</div>
                     <div class="job-company">Salesforce | Aug 2021 – Aug 2025</div>
                     <div class="job-desc">
                         <ul>
-                            <li>Implemented Storybook for React component testing within the global MuleSoft UI, ensuring compliance with international accessibility standards (WCAG).</li>
+                            <li>Implemented Storybook and automated testing strategies (Jest, Cypress, React Testing Library) for React components within the global MuleSoft UI, ensuring WCAG compliance and reliability across continuous deployments.</li>
                             <li>Optimized load times by 10-15s and reduced bundle size by 5-10 MB by refactoring synchronous Angular modules into asynchronous Web Components.</li>
                             <li>Resolved silent failures in Node.js APIs by implementing robust error handling (try-catch) and integrating PagerDuty for real-time alerting.</li>
                             <li>Led technical coordination for bi-weekly production deployments, executing code conflict resolution, on-call duties, and critical rollbacks.</li>
                         </ul>
                     </div>
-                    <div class="tech-stack">Stack: Angular, Node.js, Express, React, Storybook, Web Components.</div>
+                    <div class="tech-stack">Stack: Angular, Node.js, Express, React, Storybook, Web Components, Jest, Cypress.</div>
                 </div>
 
                 <div class="job-block">
@@ -348,14 +370,15 @@
 
                 <div class="job-block">
                     <div class="job-title">Fullstack Developer (Freelance)</div>
-                    <div class="job-company">Independent | 2015 – 2018</div>
+                    <div class="job-company">Independent | Jan 2015 – May 2020</div>
                     <div class="job-desc">
                         <ul>
                             <li>Developed a tutoring platform featuring interactive maps, MercadoPago payment gateways, and official validation of educational credentials.</li>
                             <li>Built custom e-commerce systems and inventory management platforms for clients in the mining and optical industries.</li>
+                            <li>Built gameplay modules and performance optimizations for game studio clients in Unreal Engine (C++/Blueprints) and Unity (C#).</li>
                         </ul>
                     </div>
-                    <div class="tech-stack">Stack: MongoDB, Express, Angular, Node.js.</div>
+                    <div class="tech-stack">Stack: MongoDB, Express, Angular, Node.js, Unreal Engine (C++), Unity (C#).</div>
                 </div>
             </div>
 
@@ -366,8 +389,12 @@
                     <div class="job-company">Instituto Superior 151 | 2012 - 2017</div>
                 </div>
                 <div class="job-block">
-                    <div class="job-title">Mathematics Teaching Degree</div>
+                    <div class="job-title">Mathematics Teaching Degree (incomplete)</div>
                     <div class="job-company">National University of Mar del Plata | 2010 - 2011</div>
+                </div>
+                <div class="job-block">
+                    <div class="job-title">Bachelor's Degree in Systems (incomplete)</div>
+                    <div class="job-company">Atlántida Argentina | 2006 - 2010</div>
                 </div>
             </div>
         </main>

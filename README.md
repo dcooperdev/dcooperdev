@@ -12,13 +12,15 @@ I'm a **Senior Full Stack Developer** specialized in the JavaScript ecosystem (R
 ---
 
 ### 🔭 Current Status
-- **Focus:** React + TypeScript + Vite / Python.
-- **Current Project:** Building **TraderAI** hosted on a Raspberry Pi 4. It is an autonomous cryptocurrency trading system built with Python that utilizes Large Language Models (LLMs) for market sentiment analysis, incorporates an evolutionary engine to continuously optimize its trading strategies, and sends real-time execution alerts via Telegram.
+- **Focus:** Python / AI applied to independent projects.
+- **Galt:** Multi-platform security agent (Windows, macOS, Linux) built in Python, compiled to native executables, with TDD and Firestore integration for automated audits and executive reporting.
+- **Darwin** (evolution of TraderAI): Autonomous multi-purpose trading system with multi-currency/crypto support, database-agnostic architecture, and strict logs for legal auditing and early failure detection.
 
 ### 💼 Experience & Timeline
-I come from 4 years working in high-level corporate environments (**Salesforce**, **Technisys**), where most of my code has been proprietary and private.
+After 4 years working in high-level corporate environments (**Salesforce**, **Technisys**), I transitioned to independent work focused on Python and applied AI.
 
-- **2021 - 2025:** Salesforce (Senior Software Engineer)
+- **Aug 2025 – Present:** Independent (Senior Software Engineer) — Galt & Darwin
+- **2021 - 2025:** Salesforce (Senior Software Developer)
 - **2020 - 2021:** Technisys (Senior Fullstack Developer)
 - **2018 - 2020:** Portal Automotor (Tech Lead)
 

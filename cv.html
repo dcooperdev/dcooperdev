@@ -181,7 +181,7 @@
         }
 
         .job-block {
-            margin-bottom: 12px;
+            margin-bottom: 0;
         }
 
         .job-title {
@@ -211,7 +211,7 @@
 
         .job-desc {
             font-size: 11.5px;
-            line-height: 1.35;
+            line-height: 1.28;
             color: #333;
             padding-left: 28px;
             margin: 0;
@@ -240,7 +240,7 @@
         .main-group {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 9px;
         }
 
         @media print {
@@ -262,7 +262,7 @@
             <div class="sidebar-group">
                 <div>
                     <h1>David<br>Cooper</h1>
-                    <div class="subtitle">SENIOR SOFTWARE DEVELOPER</div>
+                    <div class="subtitle">INGENIERO DE SOFTWARE SENIOR</div>
                 </div>
 
                 <div>
@@ -279,7 +279,7 @@
                 <div>
                     <div class="section-header">ACERCA DE MÍ</div>
                     <p class="about-text">
-                        Senior Software Developer especializado en arquitecturas web de alta disponibilidad. Con bases sólidas en lenguajes de bajo nivel (C/C++), enfoco mi trabajo en la resolución de problemas críticos, la optimización de rendimiento y el ownership integral del producto. Priorizo la calidad técnica y el mentoreo.
+                        Ingeniero de Software Senior especializado en arquitecturas full-stack críticas y de alta disponibilidad. Conecto requerimientos de negocio complejos con ejecución técnica robusta mediante TDD, patrones de diseño sólidos y código limpio. Trayectoria en equipos ágiles internacionales, priorizando rendimiento, seguridad y estabilidad operativa. Actualmente ampliando mi stack hacia Python e IA aplicada a través de proyectos independientes.
                     </p>
                 </div>
 
@@ -293,11 +293,21 @@
             </div>
 
             <div class="sidebar-group">
+                <div class="section-header">HABILIDADES TÉCNICAS</div>
+                <table class="skills-container">
+                    <tr><td><strong>Frontend:</strong> React, Angular, TypeScript, Web Components</td></tr>
+                    <tr><td><strong>Backend:</strong> Node.js, Express, Microservicios, REST/JWT</td></tr>
+                    <tr><td><strong>Datos:</strong> PostgreSQL, MongoDB, Firebase/Firestore</td></tr>
+                    <tr><td><strong>IA & Scripting:</strong> Python, Pandas, Asyncio, LLMs</td></tr>
+                    <tr><td><strong>Prácticas:</strong> TDD, CI/CD, Alta disponibilidad</td></tr>
+                </table>
+            </div>
+
+            <div class="sidebar-group">
                 <div class="section-header">LOGROS Y CERT.</div>
                 <ul class="interests-list">
                     <li><strong>Primeros Auxilios (Certificado):</strong> Cruz Roja Argentina.</li>
-                    <li><strong>Galt:</strong> Desarrollo de agente de seguridad multiplataforma corporativo. <em>(Stack: Python, Firestore, Pytest/TDD)</em>.</li>
-                    <li><strong>TraderAI:</strong> Sistema autónomo de trading de criptomonedas con LLMs y notificaciones vía Telegram. <em>(Stack: Python, Asyncio, Pandas, Telebot)</em>.</li>
+                    <li><strong>Docencia:</strong> Profesor de Informática, Instituto Bristol (2010–2020, 10 años).</li>
                 </ul>
             </div>
         </aside>
@@ -307,17 +317,29 @@
                 <div class="main-header">EXPERIENCIA PROFESIONAL</div>
 
                 <div class="job-block">
+                    <div class="job-title">Senior Software Engineer (Independiente/Freelance)</div>
+                    <div class="job-company">Independiente | Ago 2025 – Presente</div>
+                    <div class="job-desc">
+                        <ul>
+                            <li><strong>Galt:</strong> diseño y desarrollo de un agente de seguridad multiplataforma (Windows, macOS, Linux) en Python, compilado a ejecutables nativos, con TDD para garantizar estabilidad. Integración con bases locales y Firestore para auditorías e informes ejecutivos automatizados.</li>
+                            <li><strong>Darwin</strong> (evolución de TraderAI): ingeniería de un sistema de trading autónomo multipropósito con soporte multi-divisa/cripto, arquitectura de base de datos agnóstica y logs estrictos para auditoría legal y detección temprana de fallas.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">Stack: Python, Firestore, TDD/Pytest, Asyncio, Pandas, LLMs.</div>
+                </div>
+
+                <div class="job-block">
                     <div class="job-title">Senior Software Developer</div>
                     <div class="job-company">Salesforce | Ago 2021 – Ago 2025</div>
                     <div class="job-desc">
                         <ul>
-                            <li>Implementé Storybook para testing de componentes React en la UI global de MuleSoft, garantizando accesibilidad internacional (WCAG).</li>
-                            <li>Optimicé tiempos de carga en 10-15s y reduje el bundle en 5-10 MB refactorizando módulos síncronos de Angular hacia Web Components.</li>
+                            <li>Implementé Storybook y estrategias de testing automatizado (Jest, Cypress, React Testing Library) para componentes React en la UI global de MuleSoft, garantizando accesibilidad (WCAG) y fiabilidad ante despliegues continuos.</li>
+                            <li>Optimicé tiempos de carga en 10-15s y reduje el bundle en 5-10 MB refactorizando módulos síncronos de Angular hacia Web Components asíncronos.</li>
                             <li>Resolví fallos silenciosos en APIs Node.js complejas con manejo estricto de errores (try-catch) e integración con PagerDuty para alertas.</li>
                             <li>Lideré la coordinación técnica de despliegues quincenales, ejecutando resolución de conflictos, guardias activas y rollbacks críticos.</li>
                         </ul>
                     </div>
-                    <div class="tech-stack">Stack: Angular, Node.js, Express, React, Storybook, Web Components.</div>
+                    <div class="tech-stack">Stack: Angular, Node.js, Express, React, Storybook, Web Components, Jest, Cypress.</div>
                 </div>
 
                 <div class="job-block">
@@ -331,7 +353,7 @@
                             <li>Optimicé el consumo de datos en frontend adaptando respuestas JSON para mitigar la saturación de red en móviles.</li>
                         </ul>
                     </div>
-                    <div class="tech-stack">Stack: Node.js, Express, React, Microservicios.</div>
+                    <div class="tech-stack">Stack: Node.js, Express, React, Arquitectura de Microservicios.</div>
                 </div>
 
                 <div class="job-block">
@@ -348,14 +370,15 @@
 
                 <div class="job-block">
                     <div class="job-title">Fullstack Developer (Freelance)</div>
-                    <div class="job-company">Independiente | 2015 – 2018</div>
+                    <div class="job-company">Independiente | Ene 2015 – May 2020</div>
                     <div class="job-desc">
                         <ul>
                             <li>Desarrollé una plataforma de tutorías con mapas, pagos vía MercadoPago y validación de credenciales docentes.</li>
                             <li>Construí sistemas e-commerce y plataformas de inventario para industrias minera y óptica.</li>
+                            <li>Desarrollé módulos de gameplay y optimización de rendimiento para clientes de videojuegos en Unreal Engine (C++/Blueprints) y Unity (C#).</li>
                         </ul>
                     </div>
-                    <div class="tech-stack">Stack: MongoDB, Express, Angular, Node.js.</div>
+                    <div class="tech-stack">Stack: MongoDB, Express, Angular, Node.js, Unreal Engine (C++), Unity (C#).</div>
                 </div>
             </div>
 
@@ -366,8 +389,12 @@
                     <div class="job-company">Instituto Superior 151 | 2012 - 2017</div>
                 </div>
                 <div class="job-block">
-                    <div class="job-title">Profesorado en Matemática</div>
+                    <div class="job-title">Profesorado en Matemática (incompleto)</div>
                     <div class="job-company">Univ. Nacional de Mar del Plata | 2010 - 2011</div>
+                </div>
+                <div class="job-block">
+                    <div class="job-title">Licenciatura en Sistemas (incompleta)</div>
+                    <div class="job-company">Atlántida Argentina | 2006 - 2010</div>
                 </div>
             </div>
         </main>
